@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const LiveSearchComponent = () => {
+const Searching = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [data, setData] = useState([
-    "Apple", //apple
-    "Banana",
-    "Cherry",
-    "Date",
-    "Elderberry",
-    "Fig",
-    "Grape",
-    "Honeydew",
-    "Kiwi",
-    "Lemon",
+  const [data] = useState([
+    "Zaib",
+    "Hassan",
+    "Ali",
+    "Aoun",
+    "Zain",
+    "Ali",
+    "Asjad",
+    "Hamza",
+    "Araiz",
   ]);
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -38,4 +37,4 @@ const LiveSearchComponent = () => {
   );
 };
 
-export default LiveSearchComponent;
+export default Searching;
