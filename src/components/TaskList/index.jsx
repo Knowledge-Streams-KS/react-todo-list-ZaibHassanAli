@@ -13,19 +13,27 @@ function TaskList() {
       setFieldValue("");
     }
   };
-  const deleteitem = (id) =>{
-     const newarr = list.filter((value,index)=>{
-      return id !==index
-     });
-     setList(newarr)
+  const deleteitem = (id) => {
+    const newarr = list.filter((value, index) => {
+      return id !== index;
+    });
+    setList(newarr);
   };
   return (
     <>
-      <input type="text" placeholder="Enter..." onChange={handleChange} value={fieldValue} />
+      <input
+        type="text"
+        placeholder="Enter..."
+        onChange={handleChange}
+        value={fieldValue}
+      />
       <button onClick={addTask}>Add Task</button>
       <p>
         {list.map((value, index) => (
-          <><Task task={value} /><button onClick={()=>deleteitem(index)}>Delete</button></>
+          <>
+            <Task task={value} />
+            <button onClick={() => deleteitem(index)}>Delete</button>
+          </>
         ))}
       </p>
     </>
